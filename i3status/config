@@ -1,0 +1,38 @@
+general {
+        output_format = "i3bar"
+        interval = 5
+}
+
+order += "disk /"
+order += "ethernet _first_"
+order += "cpu_usage"
+order += "memory"
+order += "tztime local"
+
+ethernet _first_ {
+        format_up = " %ip"
+        format_down = "E: down"
+}
+
+tztime local {
+        format = " %H:%M %d.%m"
+        hide_if_equals_localtime = false
+}
+
+load {
+        format = "%5min"
+}
+
+cpu_usage {
+        format = " %usage"
+}
+
+memory {
+        format =" %used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+        format = " %avail"
+}
