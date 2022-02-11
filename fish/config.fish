@@ -1,3 +1,9 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # For the keyboard
+    setxkbmap
 end
+
+# For starting X11
+#if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ];
+#    exec startx
+#end
