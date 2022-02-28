@@ -7,3 +7,7 @@ end
 #if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ];
 #    exec startx
 #end
+
+# For starship
+# starship init fish | source
+
